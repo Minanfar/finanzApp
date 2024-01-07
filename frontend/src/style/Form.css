@@ -1,0 +1,266 @@
+* {
+  font-family: monospace;
+}
+.list-container {
+  min-width: 70vw;
+  min-height: 80vh;
+  background-color: #e5e5e5;
+  background-image: radial-gradient(rgba(20, 33, 61, 0.25) 1px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px;
+  padding: 40px;
+  border-radius: 20px;
+  margin: 10px auto;
+  font-weight: 600;
+}
+
+.budget-title {
+  font-size: 1.4rem;
+}
+
+.budget-input {
+  width: 20vw;
+  height: 25px;
+  border-radius: 5px;
+  border: 2px solid #14213d;
+  background-color: #a3ff23;
+  box-shadow: 4px 2px #14213d;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #14213d;
+  padding: 5px 10px;
+  margin: 15px 0px;
+}
+
+.input-data:focus {
+  color: #14213d;
+  background-color: #f3f3f3;
+  box-shadow: -2px -2px 2px #14213d;
+  transition: 0.1s;
+  transition-property: box-shadow;
+}
+
+.input-data {
+  width: 25vw;
+  height: 40px;
+  border-radius: 0.4em;
+  border: 3px solid #14213d;
+  background-color: #ffffff;
+  box-shadow: 4px 2px #14213d;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #14213d;
+  padding: 5px 10px;
+  margin-top: 10px;
+  outline: none;
+}
+
+.data-insert {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/**/
+button {
+  font-size: 1.2rem;
+  color: white;
+  background-color: #fca311;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 4px 2px #14213d;
+  font-weight: 900;
+  border: 3px solid black;
+  border-radius: 0.4em;
+}
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+  background-color: #14213d;
+}
+/* button:hover::shadow {
+  background-color: #928d86;
+} */
+
+/* button span:not(:nth-child(6)) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 30px;
+  width: 30px;
+  background-color: #fc1111;
+  border-radius: 50%;
+  transition: 0.6s ease;
+} */
+/* 
+button span:nth-child(6) {
+  position: relative;
+}
+
+button span:nth-child(1) {
+  transform: translate(-3.3em, -4em);
+}
+
+button span:nth-child(2) {
+  transform: translate(-6em, 1.3em);
+}
+
+button span:nth-child(3) {
+  transform: translate(-0.2em, 1.8em);
+}
+
+button span:nth-child(4) {
+  transform: translate(3.5em, 1.4em);
+}
+
+button span:nth-child(5) {
+  transform: translate(3.5em, -3.8em);
+} */
+
+/* button:hover span:not(:nth-child(6)) {
+  transform: translate(-50%, -50%) scale(4);
+  transition: 1.5s ease;
+} */
+
+table {
+  background: #012b39;
+  border-radius: 0.3em;
+  border-collapse: collapse;
+  width: 100%;
+  overflow-x: auto;
+  padding: 5px;
+}
+
+th {
+  border-bottom: 1px solid #364043;
+  color: #e2b842;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid #364043;
+  color: #fff;
+  font-weight: 400;
+  padding: 1em 1em;
+  font-size: 1.2em;
+}
+
+.disabled td {
+  color: #4f5f64;
+}
+
+tbody tr {
+  transition: background 0.25s ease;
+}
+
+tbody tr:hover {
+  background: #014055;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* .table-btn:hover {
+  background-color: #fca417;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 0.1px 1px 2px #cbcbcb;
+} */
+
+.edit-input {
+  width: 100px;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.form-btn {
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+}
+
+.budget-normal {
+  color: rgb(2, 243, 22);
+  text-shadow: 2px 2px 10px rgb(1, 120, 11);
+}
+
+.budget-warning-50 {
+  color: rgba(11, 236, 206, 0.589);
+}
+
+.budget-warning-20 {
+  color: rgb(0, 149, 255);
+}
+
+.budget-negative {
+  color: rgb(255, 16, 16);
+  text-shadow: 2px 2px 5px red;
+}
+
+@media screen and (max-width: 768px) {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    min-width: 120px;
+    padding: 8px;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody {
+    display: block;
+  }
+
+  tbody tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; /* Add some space between rows */
+    border: 1px solid #ccc; /* Optional: add borders for each row */
+    border-radius: 5px; /* Optional: add border radius */
+  }
+
+  tbody td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  tbody td {
+    display: block;
+    text-align: left;
+  }
+
+  tbody td:last-child {
+    text-align: left;
+  }
+}
+
+.bottom-btn-box {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  text-align: center;
+}

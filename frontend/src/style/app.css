@@ -1,0 +1,25 @@
+/* body {
+  padding-top: 20px;
+} */
+
+.pageNavigate {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.diagram {
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
